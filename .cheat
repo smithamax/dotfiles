@@ -1,0 +1,26 @@
+d		cd ~/Dropbox
+g		git
+j		jobs
+s		subl .
+o		open
+oo		open .
+c		Trim new lines and copy to clipboard
+fs		get file size
+
+ip
+localip
+ips
+
+w 		who is logged into what
+du		disk usage
+df		disk free
+
+!!		last command, also Ctrl+P
+
+!!:^		first arg of last command
+!!:$		last arg of last command
+!!:*		all args of last command
+
+Ctrl+e		go to end of prompt
+Ctrl+u 		clear from cursor to beginning of prompt
+Ctrl+a 		go to beginning of prompt
