@@ -37,7 +37,7 @@ function server() {
 }
 
 function sshhome() {
-	local ip="$(curl -s -H find.slurm.info)"
+	local ip="$(curl -s find.slurm.info)"
 	ssh "dom@${ip}" -p 
 }
 
