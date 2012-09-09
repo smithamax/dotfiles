@@ -17,6 +17,8 @@ alias lsd='ls -l ${colorflag} | grep "^d"'
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+alias cheat='cat ~/.cheat'
+
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
