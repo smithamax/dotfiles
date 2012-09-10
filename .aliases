@@ -35,6 +35,12 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 	alias "$method"="lwp-request -m '$method'"
 done
 
-# Stuff I never really use but cannot delete either because of http://xkcd.com/530/
-alias stfu="osascript -e 'set volume output muted true'"
-alias pumpitup="osascript -e 'set volume 7'"
+# because xkcd is a boss. http://xkcd.com/530/
+if [[ $(uname) = 'Darwin' ]]; then
+	alias stfu="osascript -e 'set volume output muted true'"
+	alias pumpitup="osascript -e 'set volume 7'"
+else
+	# untested
+	alias stfu="amixer -c 0 sset Master,0 0%"
+	alias pumpitup="amixer -c 0 sset Master,0 70%"
+fi

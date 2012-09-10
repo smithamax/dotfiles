@@ -27,6 +27,11 @@ fi
 # 	echo "Copied to clipboard: http://paulirish.com/i/$1"
 # }
 
+function wiki()
+{
+	dig +short txt $1.wp.dg.cx
+}
+
 # Start an HTTP server from a directory, optionally specifying the port
 function server() {
 	local port="${1:-8000}"
