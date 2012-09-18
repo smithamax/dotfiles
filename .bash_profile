@@ -9,6 +9,8 @@ unset file
 
 # Put npm bin on the PATH
 export PATH="/usr/local/share/npm/bin:$PATH"
+# Python on path
+export PATH="/usr/local/share/python:$PATH"
 
 
 # Load RVM into a shell session *as a function*

@@ -19,6 +19,9 @@ alias sudo='sudo '
 
 alias cheat='cat ~/.cheat'
 
+# requires my spotify-cli https://github.com/Smithamax/spotify-cli
+alias play='spotify play'
+
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
