@@ -2,9 +2,8 @@
 alias d="cd ~/Dropbox"
 alias g="git"
 alias j="jobs"
-alias s="subl ."
+alias s="subl"
 alias o="open"
-alias oo="open ."
 
 alias ls='ls -G'
 alias ll='ls -l'
