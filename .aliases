@@ -48,5 +48,5 @@ if [[ $(uname) = 'Darwin' ]]; then
 else
 	alias open='xdg-open'
 	alias stfu="amixer sset Master mute"
-	alias pumpitup="amixer sset Master 80%"
+	alias pumpitup="amixer sset Master 80% unmute"
 fi
