@@ -7,6 +7,10 @@ for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
 done
 unset file
 
+if [ -f /etc/bash_completion ]; then
+	. /etc/bash_completion
+fi
+
 hash brew &>/dev/null
 if [ $? -eq 0 ]; then
 	# Put npm bin on the PATH

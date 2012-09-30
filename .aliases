@@ -5,13 +5,20 @@ alias j="jobs"
 alias s="subl"
 alias o="open"
 
-alias ls='ls -G'
+# Detect which `ls` flavor is in use
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+	colorflag="--color"
+else # OS X `ls`
+	colorflag="-G"
+fi
+
+alias ls='ls ${colorflag}'
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 
 # List only directories
-alias lsd='ls -l ${colorflag} | grep "^d"'
+alias lsd='ls -l | grep "^d"'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
@@ -26,11 +33,8 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ifconfig -a | grep -o 'inet \(addr:\)\?\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)' | sed -e 's/inet \(addr:\)*//' | sed -e '/127\.[0-9]*\.[0-9]*\.[0-9]*/ d'"
 alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
 
-# Trim new lines and copy to clipboard
-alias c="tr -d '\n' | pbcopy"
-
 # File size
-alias fs="stat -f \"%z bytes\""
+alias fs="du -sh"
 
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
