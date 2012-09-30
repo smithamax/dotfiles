@@ -47,7 +47,6 @@ if [[ $(uname) = 'Darwin' ]]; then
 	alias pumpitup="osascript -e 'set volume 7'"
 else
 	alias open='xdg-open'
-	# untested
-	alias stfu="amixer -c 0 sset Master,0 0%"
-	alias pumpitup="amixer -c 0 sset Master,0 70%"
+	alias stfu="amixer sset Master mute"
+	alias pumpitup="amixer sset Master 80%"
 fi
