@@ -69,6 +69,28 @@ function notify() {
 		https://api.pushover.net/1/messages
 }
 
+function pull() {
+	if [[ $1 == 'music' ]]; then
+		local dest="$HOME/Music"
+		local src="/Volumes/Music"
+		if [[ ! -d ${src} ]]; then
+			ping -c1 lurr &> /dev/null
+			if [[ ! $? -eq 0 ]]; then
+				local ip="$(curl -s find.slurm.info)"
+				local src="dom@${ip}:/srv/music"
+			else
+				local src="dom@lurr:/srv/music"
+			fi
+		fi
+	fi
+	rsync -avP --human-readable ${src} ${dest}
+}
+complete -W "music" -o nospace pull
+
+function throw() {
+	rsync -avP --human-readable --remove-source-files $@
+}
+
 # Escape UTF-8 characters into their 3-byte format
 # function escape() {
 # 	printf "\\\x%s" $(printf "$@" | xxd -p -c1 -u)
