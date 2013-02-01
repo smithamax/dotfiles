@@ -15,6 +15,15 @@ w 		who is logged into what
 du		disk usage
 df		disk free
 
+create tar.gz
+tar -cz files
+
+extract tar
+tar -x
+
+uses stdin/out eg pipe with |,<,>
+or use -f to specify tar file
+
 !!		last command, also Ctrl+P
 
 !!:^		first arg of last command
