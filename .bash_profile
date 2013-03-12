@@ -1,4 +1,4 @@
-export PATH="$HOME/bin:$PATH"
+export PATH="/Users/dom/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
@@ -13,10 +13,6 @@ fi
 
 hash brew &>/dev/null
 if [ $? -eq 0 ]; then
-	# Put npm bin on the PATH
-	export PATH="/usr/local/share/npm/bin:$PATH"
-	# Python on path
-	export PATH="/usr/local/share/python:$PATH"
 
 	# If possible, add tab completion for many more commands
 	if [ -f $(brew --prefix)/etc/bash_completion ]; then
