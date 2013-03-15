@@ -13,6 +13,8 @@ fi
 
 hash brew &>/dev/null
 if [ $? -eq 0 ]; then
+	# Put npm bin on the PATH
+	export PATH="/usr/local/share/npm/bin:$PATH"
 
 	# If possible, add tab completion for many more commands
 	if [ -f $(brew --prefix)/etc/bash_completion ]; then
