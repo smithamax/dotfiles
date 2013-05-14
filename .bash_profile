@@ -19,6 +19,8 @@ if [ $? -eq 0 ]; then
 	# If possible, add tab completion for many more commands
 	if [ -f $(brew --prefix)/etc/bash_completion ]; then
 		. $(brew --prefix)/etc/bash_completion
+		# add completions for g alias
+		complete -o default -o nospace -F _git g
 	fi
 fi
 
