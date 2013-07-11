@@ -24,5 +24,9 @@ if [ $? -eq 0 ]; then
 	fi
 fi
 
+# go exports
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 # Load RVM into a shell session *as a function*
 [[ -r "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
