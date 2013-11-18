@@ -1,5 +1,6 @@
 
 alias d="cd ~/Dropbox"
+alias loke="cd ~/Dropbox/loke"
 alias g="git"
 alias j="jobs"
 alias s="subl"
