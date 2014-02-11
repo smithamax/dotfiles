@@ -67,7 +67,7 @@ function notify() {
 		-F "user=$PUSHOVER_USER" \
 		-F "message=$1" \
 		https://api.pushover.net/1/messages
-		/Applications/terminal-notifier.app/Contents/MacOS/terminal-notifier -message "$1"
+		terminal-notifier -message "$1"
 }
 
 function pull() {

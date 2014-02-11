@@ -31,3 +31,4 @@ export PATH=$PATH:$GOPATH/bin
 # rbenv
 eval "$(rbenv init -)"
 
+source $HOME/.bash_loke
