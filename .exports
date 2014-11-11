@@ -11,3 +11,6 @@ export HISTSIZE=9999
 
 # Ignore dupe commands and other ones you don't care about
 export HISTIGNORE="&:[ ]*:exit"
+
+export DROPBOX=$HOME/Dropbox
+export LOKE_DIR=$DROPBOX/loke

@@ -1,5 +1,5 @@
 
-alias d="cd ~/Dropbox"
+alias d="cd $DROPBOX"
 alias g="git"
 alias j="jobs"
 alias s="subl"
@@ -36,6 +36,10 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+
 
 # File size
 alias fs="du -sh"
+
+# ISO date, because thats the date i want to use
+alias isodate='date +"%Y-%m-%d"'
+alias isodatetime='date -u +"%Y-%m-%dT%H:%M:%SZ"'
 
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do

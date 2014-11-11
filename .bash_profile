@@ -1,8 +1,7 @@
 export PATH="/Users/dom/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin"
 
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
-# ~/.extra can be used for settings you don’t want to commit
-for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
+for file in ~/.{bash_prompt,exports,aliases,functions}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
@@ -32,3 +31,8 @@ export PATH=$PATH:$GOPATH/bin
 eval "$(rbenv init -)"
 
 source $HOME/.bash_loke
+
+# $DROPBOX/.extra can be used for settings you don’t want to commit
+if [ -f $DROPBOX/.extra ]; then
+	source $DROPBOX/bash/.extra
+fi

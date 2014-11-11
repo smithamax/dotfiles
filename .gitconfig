@@ -1,0 +1,37 @@
+[user]
+	name = Dominic Smith
+	email = code@smithamax.me
+
+[core]
+	editor = subl -w
+	excludesfile = /Users/dom/.gitignore_global
+[credential]
+[alias]
+	s = status
+	l = log --graph --pretty='format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+	permission-reset = "!git diff -p | grep -E \"^(diff|old mode|new mode)\" | sed -e \"s/^old/NEW/;s/^new/old/;s/^NEW/new/\" | git apply"
+	show-index-ignore = "!git ls-files -v $(git rev-parse --show-toplevel) | grep \"h \""
+	today = log --pretty='format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset' --author=Dominic --since="6am"
+	reup = "!git pull --rebase && git push"
+[color]
+	ui = true
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[mergetool "kdiff3"]
+	path = /usr/local/bin/kdiff3
+	trustExitCode = false
+[mergetool]
+	prompt = false
+[merge]
+	tool = Kaleidoscope
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain
