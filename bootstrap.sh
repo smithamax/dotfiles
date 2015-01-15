@@ -10,6 +10,8 @@ function installStuff() {
 	if [ $? -ne 0 ]; then
 		ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 	fi
+	brew tap homebrew/boneyard
+	brew bundle
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
