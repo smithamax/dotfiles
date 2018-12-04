@@ -21,3 +21,7 @@ export GIT_PS1_SHOWUPSTREAM="auto"
 source ~/.git-prompt.sh
 
 export PS1='\n\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;35m\]$(__git_ps1 " (%s)")\[\033[00m\] \\$ '
+
+if ! [[ -z "$AWS_VAULT" ]]; then
+  export PS1='\n\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;35m\]$(__git_ps1 " (%s)")\[\033[00m\] \[\033[1;31m\]($AWS_VAULT)\[\033[00m\] \\$ '
+fi

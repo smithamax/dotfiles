@@ -7,7 +7,7 @@ done
 unset file
 
 if [ -f /etc/bash_completion ]; then
-	. /etc/bash_completion
+	source /etc/bash_completion
 fi
 
 hash brew &>/dev/null
@@ -17,7 +17,7 @@ if [ $? -eq 0 ]; then
 
 	# If possible, add tab completion for many more commands
 	if [ -f $(brew --prefix)/etc/bash_completion ]; then
-		. $(brew --prefix)/etc/bash_completion
+		source $(brew --prefix)/etc/bash_completion
 		# add completions for g alias
 		complete -o default -o nospace -F _git g
 	fi
@@ -27,10 +27,9 @@ fi
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-# rbenv
-eval "$(rbenv init -)"
-
-source $HOME/.bash_loke
+if [[ -f $HOME/.bash_loke ]]; then
+	source $HOME/.bash_loke
+fi
 
 # $DROPBOX/.extra can be used for settings you don’t want to commit
 if [ -f $DROPBOX/.extra ]; then

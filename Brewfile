@@ -1,34 +1,37 @@
-update
-
-tap homebrew/binary
-tap homebrew/completions
-tap homebrew/versions
-tap caskroom/versions
-
-install bash-completion
-install caskroom/cask/brew-cask
-
-install curl wget
-install node
-install git
-install packer
-install rbenv
-
-cask install atom
-cask install dropbox
-cask install google-chrome
-cask install google-chrome-canary
-cask install hipchat
-cask install kaleidoscope
-cask install mailbox
-cask install robomongo
-cask install sourcetree
-cask install spotify
-cask install sublime-text
-cask install totalterminal
-cask install virtualbox
-cask install vagrant
-
-cask cleanup
-
-doctor
+tap "homebrew/core"
+tap "homebrew/bundle"
+tap "caskroom/versions"
+tap "caskroom/cask"
+brew "openssl"
+brew "awscli"
+brew "bash-completion"
+brew "curl"
+brew "git"
+brew "hub"
+brew "m-cli"
+brew "mas"
+brew "node"
+brew "wget"
+cask "atom"
+cask "aws-vault"
+cask "docker"
+cask "dropbox"
+cask "firefox"
+cask "google-chrome"
+cask "iterm2"
+cask "kaleidoscope"
+cask "kap"
+cask "kdiff3"
+cask "sketch"
+cask "slack"
+cask "softu2f"
+cask "sourcetree"
+cask "spotify"
+cask "sublime-text"
+cask "visual-studio-code"
+cask "vlc"
+cask "caskroom/versions/google-chrome-canary"
+mas "1Password", id: 443987910
+mas "DaisyDisk", id: 411643860
+mas "Sip", id: 507257563
+mas "Xcode", id: 497799835

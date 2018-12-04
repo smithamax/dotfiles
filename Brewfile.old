@@ -1,0 +1,18 @@
+install bash-completion
+
+install curl wget
+install node
+install git
+
+cask install atom
+cask install dropbox
+cask install google-chrome
+cask install google-chrome-canary
+cask install kaleidoscope
+cask install sourcetree
+cask install spotify
+cask install sublime-text
+cask install virtualbox
+
+cask cleanup
+
