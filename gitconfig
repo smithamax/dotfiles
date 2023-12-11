@@ -5,11 +5,15 @@
 [core]
 	editor = subl -w
 	excludesfile = /Users/dom/.gitignore_global
-[credential]
 [alias]
+	prm = !hub pull-request -p -b master -a smithamax
+	prd = !hub pull-request -p -b develop -a smithamax
+	ph = push origin HEAD -u
+	d = diff
+	c = commit
+	co = checkout
 	s = status
 	l = log --graph --pretty='format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
-	permission-reset = "!git diff -p | grep -E \"^(diff|old mode|new mode)\" | sed -e \"s/^old/NEW/;s/^new/old/;s/^NEW/new/\" | git apply"
 	show-index-ignore = "!git ls-files -v $(git rev-parse --show-toplevel) | grep \"h \""
 	today = log --pretty='format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset' --author=Dominic --since="6am"
 	reup = "!git pull --rebase && git push"
@@ -35,3 +39,5 @@
 	default = simple
 [credential]
 	helper = osxkeychain
+[pull]
+	rebase = false

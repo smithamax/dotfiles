@@ -13,4 +13,11 @@ export HISTSIZE=9999
 export HISTIGNORE="&:[ ]*:exit"
 
 export DROPBOX=$HOME/Dropbox
-export LOKE_DIR=$DROPBOX/loke
+export LOKE_DIR=$HOME/loke
+
+# Android dev stuff
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools

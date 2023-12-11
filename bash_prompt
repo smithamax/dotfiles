@@ -8,7 +8,8 @@ export GIT_PS1_SHOWDIRTYSTATE=true
 # You can also see if currently something is stashed, by setting
 # GIT_PS1_SHOWSTASHSTATE to a nonempty value. If something is stashed,
 # then a '$' will be shown next to the branch name.
-#
+export GIT_PS1_SHOWSTASHSTATE=true
+
 # If you would like to see if there're untracked files, then you can set
 # GIT_PS1_SHOWUNTRACKEDFILES to a nonempty value. If there're untracked
 # files, then a '%' will be shown next to the branch name.

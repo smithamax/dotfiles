@@ -16,7 +16,6 @@ fi
 alias ls='ls ${colorflag}'
 alias ll='ls -lh'
 alias la='ls -A'
-alias l='ls -CF'
 
 # List only directories
 alias lsd='ls -l | grep "^d"'
@@ -55,3 +54,5 @@ else
 	alias stfu="amixer sset Master mute"
 	alias pumpitup="amixer sset Master 80% unmute"
 fi
+
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"

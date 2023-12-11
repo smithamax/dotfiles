@@ -23,6 +23,9 @@ if [ $? -eq 0 ]; then
 	fi
 fi
 
+# python for ansible
+# export PATH="$PATH:$HOME/Library/Python/2.7/bin"
+
 # go exports
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
@@ -35,3 +38,5 @@ fi
 if [ -f $DROPBOX/.extra ]; then
 	source $DROPBOX/bash/.extra
 fi
+
+export EDITOR=sublw
